@@ -1,18 +1,27 @@
-class loginpage {
-    elements =
-        {
-            username: () => cy.get('input[data-test="username"]'),
-            password: () => cy.get('input[data-test="password"]'),
-            clickbutton: () => cy.get('input[data-test="login-button"]')
-        }
-    enterusername(username) {
-        this.elements.username().type(username)
+class LoginPage {
+    getUsername() {
+        return cy.get('input[data-test="username"]')
     }
-    enterpassword(password) {
-        this.elements.password().type(password)
+
+    getPasswordInput() {
+        return cy.get('input[data-test="password"]')
     }
-    clickbutton() {
-        this.elements.clickbutton().click()
+
+    getLoginButton() {
+        return cy.get('input[data-test="login-button"]')
+    }
+
+    enterUsername(username) {
+        this.getUsername().type(username)
+    }
+
+    enterPassword(password) {
+        this.getPassword().type(password)
+    }
+
+    clickButton() {
+        this.getButton().click()
     }
 }
-export default loginpage;
+
+export default LoginPage;
