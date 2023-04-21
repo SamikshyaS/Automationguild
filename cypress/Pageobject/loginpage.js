@@ -3,11 +3,11 @@ class LoginPage {
         return cy.get('input[data-test="username"]')
     }
 
-    getPasswordInput() {
+    getPassword() {
         return cy.get('input[data-test="password"]')
     }
 
-    getLoginButton() {
+    getButton() {
         return cy.get('input[data-test="login-button"]')
     }
 
@@ -25,3 +25,4 @@ class LoginPage {
 }
 
 export default LoginPage;
+//test

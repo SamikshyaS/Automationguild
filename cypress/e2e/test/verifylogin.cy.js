@@ -5,19 +5,17 @@ describe('Verify the loginpage', () => {
     })
     it("Verify the login page", () => {
         const loginobj = new loginpage();
-        loginobj.enterusername('standard_user')
-        loginobj.enterpassword('secret_sauce')
-        loginobj.clickbutton()
+        loginobj.enterUsername('standard_user')
+        loginobj.enterPassword('secret_sauce')
+        loginobj.clickButton()
         loginobj.pagetitle().should('eq', 'Sauce Labs Backpack');
     })
     it('User should be able to naviaget to the page', () => {
         const loginobj = new loginpage();
-        loginobj.enterusername('standard_user')
-        loginobj.enterpassword('secret_sauce')
-        loginobj.clickbutton()
+        loginobj.enterUsername('standard_user')
+        loginobj.enterPassword('secret_sauce')
+        loginobj.clickButton()
         loginobj.get('div.inventory_item_name').click();
         loginobj.pagetitle().should('eq', 'Sauce Labs Backpack');
-
-        //this is the changes to create a pr ignore this
     })
 })
